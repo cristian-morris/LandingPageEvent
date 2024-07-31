@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <!-- Estilos Css -->
+    <link rel="stylesheet" href="Css/styles.css">
+    <link rel="stylesheet" href="Css/contacto.css">
+    <!--Link para el estilo edlas letras en formato CDN-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--CDN de @Google Font Derechos Reservados-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- nabvar -->
+    <header>
+        <div class="logo-container">
+            <img src="imagenes/logo-2.png" alt="Logo" width="145" height="145">
+        </div>
+        <nav>
+            <ul>
+                <li><a class="link" href="inicio.html">Inicio</a></li>
+                <li><a class="link" href="quienes-somos.html">Quienes Somos</a></li>
+                <li><a class="link" href="servicio.html" class="active">Servicios</a></li>
+                <li><a class="link" href="contactos.html">Contacto</a></li>
+                <li><a href="index.html#login" class="login-button">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+        </nav>
+    </header><br>
+    <!-- fin navbar -->
+
+    <!-- contenido -->
+    <div class="container-contacto">
+        <div class="row justify-content-center">
+            <div class="col-6 col-sm-3 info">
+                <h1>Contáctonos</h1>
+                <p class="info-texto"><b>¡Realiza tus eventos con nosotros!</b>, Somos los mejores realizando Eventos, confia en nosotros.</p>
+                <p class="info-texto2">si deseas consultar mayor informacion sobre nuestros servicios o tienes dudas al respecto, no dudes en contáctarnos y uno de nuestros asesores se contactará contigo a la brevedad.</p>
+                <p>Aquí te dejamos información adicional para poder contactarnos:</p>
+                <p><strong>Dirección:</strong> Calle falsa 123, Ciudad, País</p>
+                <p><strong>Teléfono:</strong> +52 997 145 8999</p>
+                <p><strong>Correo Electrónico:</strong> ContactoDigitalEventHub@gmail.com</p>
+                <h5 class="horarios">Horarios de Atención</h5>
+                <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                <p>Sábado: 10:00 AM - 2:00 PM</p>
+                <p>Domingos: Cerrado</p>
+                <p>también puedes usar este formulario para hacer preguntas dirrectamente desde la Web.</p>
+            </div>
+            <div class="col-6 col-sm-3">
+                <div class="formulario-contacto">
+                    <h1 class="title">Contáctonos</h1>
+                    <form action="">
+                        <div class="row input-datos">
+                            <div class="form-group col-6 col-sm-6 input-nombre">
+                                <label for="nombre" class="required-label">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Ingresa tu nombre" required>
+                            </div>
+                            <div class="form-group col-6 col-sm-6">
+                                <label for="nombre" class="required-label">Apellido</label>
+                                <input type="text" class="form-control" placeholder="ingrese tu nombre" required>
+                            </div> 
+                            <div class="form-group col-sm-6 input-telefono">
+                                <label for="nombre" class="required-label">Teléfono</label>
+                                <input type="text" class="form-control" placeholder="ingrese tu nombre" required>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="form-group col-6 col-sm-6 input-correo">
+                                <label for="nombre" class="required-label">Correo Electronico</label>
+                                <input type="text" class="form-control" placeholder="ingrese tu nombre" required>
+                            </div>
+                       
+                            <div class="form-group col-6 col-sm-6">
+                                <label for="nombre" class="required-label">Horario de Contacto</label>
+                                <input type="text" class="form-control" placeholder="horario de contacto" required>
+                            </div>
+
+                            <div class="form-group input-motivo">
+                                <label for="motivo" class="required-label">Motivo</label>
+                                <Textarea class="form-control" placeholder="Motivo de contacto" rows="2"></Textarea>
+                            </div>
+
+                            <div class="form-group col-6 col-sm-6">
+                                <label for="consulta" class="required-label">Tipo de consulta</label>
+                                <select name="select-consulta" id="consulta" class="form-control" required>
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="">Información sobre el servicio</option>
+                                    <option value="">Feedback y Sugerencias</option>
+                                    <option value="">Reclamaciones</option>
+                                    <option value="">Soporte técnico</option>
+                                    <option value="">Reserva de Boletos</option>
+                                    <option value="">Precios</option>
+                                    <option value="">Membresías y Paquetes para Organizador</option>
+                                    <option value="">Requisitos y Procedimientos para Registrar mi evento</option>
+                                    <option value="">Disponibilidad de horario</option>
+                                    <option value="">Descuentos y ofertas</option>
+                                    <option value="">Otro...</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-6 col-sm-6 ">
+                                <label for="canal-preferido" class="required-label">Canal de contacto</label>
+                                <select name="canal" id class="form-control">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="">Teléfono</option>
+                                    <option value="">Correo Electrónico</option>
+                                    <option value="">WhatsApp</option>
+                                </select>
+                            </div>
+                        </div><br>
+                        <button class="Boton">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <!-- fin del contenido -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container-info">
+            <div class="row justify-content-center">
+               
+                <div class="footer-section links col-6 col-sm-3">
+                    <h3>Enlaces</h3>
+                        <ul>
+                            <li><a href="/inicio">Inicio</a></li>
+                            <li><a href="/contacto">¿Quienes Somos?</Q></a></li>
+                            <li><a href="/privacidad">Privacidad</a></li>
+                            <li><a href="/servicios">Terminos y Condiciones</a></li>
+                        </ul>
+                </div>
+     <div class="footer-plataformas col-6 col-sm-3">
+                    <h5>Usa Digital Event Hub en</h5>
+                    <ul>
+                        <li><a href="/inicio">Android</a></li>
+                        <li><a href="/inicio">Iphone</a></li>
+                        <li><a href="/inicio">Mac/PC</a></li>
+                        <li><a href="/contacto">Digital Event Hub Web</Q></a></li>
+                    </ul>
+    
+                </div>
+                <div class="container-redes col-6 col-sm-3">
+                    <h4>Nuestras Redes Sociales</h4>
+                        <div class="social-icons">
+                            <a class="Facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="Instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="Twitter-X" href="#" target="_blank">
+                                    <img src="imagenes/Twitter-X-White-Logo-PNG-1.png" alt="X Logo">
+                            </a>
+                            <a class="WhatsApp" href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a class="Youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div> 
+                        <p>¡Síguenos en nuestras redes sociales para estar informado!</p>
+                </div>
+            </div>
+            <div class="footer-info-web">
+                <h3>Contacto</h3>
+                    <p>Email: contacto@ejemplo.com</p>
+                    <p>Teléfono: +34 123 456 789</p>
+                    <p>Dirección: Calle Ejemplo 123, Ciudad, País</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container-logo-footer text-center text-md-left mb-3 mb-md-0">
+                <img class="logo-footer d-block mx-auto" src="imagenes/logo.jpg" alt="EventHub" width="110" height="110" >
+            </div>
+            <p>2024&copy; Digital Event Hub . Todos los derechos reservados, condiciones y politicas de privacidad.</p>
+        </div>
+    </footer>
+    
+    <!-- fin footer -->
+</body>
+</html>

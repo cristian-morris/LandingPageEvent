@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Event Hub</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <!--Link para el estilo edlas letras en formato CDN-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--CDN de @Google Font Derechos Reservados-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="imagenes/logo-2.png" alt="Logo" width="145" height="145">
+        <h1>Bienvenidos</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a class="link" href="inicio.html">Inicio</a></li>
+            <li><a class="link" href="quienes-somos.html">Quienes Somos</a></li>
+            <li><a class="link" href="servicio.html" class="active">Servicios</a></li>
+            <li><a class="link" href="contactos.html">Contacto</a></li>
+            <li><a href="index.html#login" class="login-button">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+    </nav>
+</header>
+
+<div class="main-content">
+    <div class="content-wrapper">
+        <h1 class="typewriter-text" id="typewriter">Digital Event <br>Hub</h1>
+
+        <h2>Divierte en  nuestros eventos populares</h2>
+        
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="imagenes/1.jpg" alt="Evento 1" width="1000">
+                <img src="imagenes/2.jpg" alt="Evento 2" width="1000">
+                <img src="imagenes/3.jpg" alt="Evento 3" width="1000">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="carousel-indicators">
+                <span class="active" onclick="currentSlide(0)"></span>
+                <span onclick="currentSlide(1)"></span>
+                <span onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+<footer>
+    <div class="container-info">
+        <div class="row justify-content-center">
+           
+            <div class="footer-section links col-6 col-sm-3">
+                <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="/inicio">Inicio</a></li>
+                        <li><a href="/contacto">¿Quienes Somos?</Q></a></li>
+                        <li><a href="/privacidad">Privacidad</a></li>
+                        <li><a href="/servicios">Terminos y Condiciones</a></li>
+                    </ul>
+            </div>
+            <div class="footer-plataformas col-6 col-sm-3">
+                <h5>Usa Digital Event Hub en</h5>
+                <ul>
+                    <li><a href="/inicio">Android</a></li>
+                    <li><a href="/inicio">Iphone</a></li>
+                    <li><a href="/inicio">Mac/PC</a></li>
+                    <li><a href="/contacto">Digital Event Hub Web</Q></a></li>
+                </ul>
+
+            </div>
+            <div class="container-redes col-6 col-sm-3">
+                <h4>Nuestras Redes Sociales</h4>
+                    <div class="social-icons">
+                        <a class="Facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="Instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="Twitter-X" href="#" target="_blank">
+                                <img src="imagenes/Twitter-X-White-Logo-PNG-1.png" alt="X Logo">
+                        </a>
+                        <a class="WhatsApp" href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a class="Youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div> 
+                    <p>¡Siguenos en nuestras redes sociales para estar informado!</p>
+            </div>
+        </div>
+        <div class="footer-info-web">
+            <h3>Contacto</h3>
+                <p>Email: contacto@ejemplo.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+                <p>Dirección: Calle Ejemplo 123, Ciudad, País</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container-logo-footer text-center text-md-left mb-3 mb-md-0">
+            <img class="logo-footer" src="imagenes/logo.jpg" alt="EventHub" width="110" height="110" >
+        </div>
+        <p>2024&copy; Digital Event Hub . Todos los derechos reservados, condiciones y politicas de privacidad.</p>
+    </div>
+</footer>
+
+<script>
+    // Activar el menú "Inicio" al cargar la página
+    window.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            if (anchor.getAttribute('href') === '#inicio') {
+                anchor.classList.add('active');
+            } else {
+                anchor.classList.remove('active');
+            }
+        });
+    });
+
+    let currentIndex = 0;
+
+    function moveSlide(n) {
+        showSlide(currentIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlide(currentIndex = n);
+    }
+
+    function showSlide(n) {
+        const slides = document.querySelectorAll('.carousel-images img');
+        const indicators = document.querySelectorAll('.carousel-indicators span');
+
+        if (n >= slides.length) currentIndex = 0;
+        if (n < 0) currentIndex = slides.length - 1;
+
+        slides.forEach((slide, index) => {
+            slide.style.display = 'none';
+            indicators[index].className = '';
+        });
+
+        slides[currentIndex].style.display = 'block';
+        indicators[currentIndex].className = 'active';
+    }
+
+    showSlide(currentIndex);
+
+    // Cambio automático de diapositivas cada 3 segundos
+    setInterval(() => {
+        moveSlide(1);
+    }, 3000);
+
+    // Reiniciar animación de máquina de escribir
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            if (this.getAttribute('href') === '#inicio') {
+                e.preventDefault();
+                const element = document.getElementById('typewriter');
+                element.classList.remove('typewriter-text'); // Remover clase
+                void element.offsetWidth; // Reflow para forzar el navegador a reconocer el cambio
+                element.classList.add('typewriter-text'); // Volver a agregar clase
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
